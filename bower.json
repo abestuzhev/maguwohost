@@ -1,0 +1,20 @@
+{
+  "name": "maguwohost",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Aleksey Bestuzhev <aleksey.bestuzhev@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.1.1"
+  }
+}
