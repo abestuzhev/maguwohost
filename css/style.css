@@ -1,6 +1,15 @@
-.m-item, .m-item--left, .m-item--right {
-  outline: 1px solid #777;
-  height: 500px; }
+.m-item--left__serv, .m-item--right__serv, .m-item, .m-item--left, .m-item--right {
+  outline: 1px solid #777; }
+
+.m-item--left::after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.m-item--left__serv, .m-item--right__serv {
+  width: 585px;
+  padding-top: 115px;
+  padding-bottom: 105px; }
 
 header.m-item {
   height: 147px; }
@@ -13,18 +22,61 @@ header.m-item {
     clear: both; }
   .m-item--left {
     width: 50%;
+    background-color: #202242;
     float: left; }
+    .m-item--left__serv {
+      float: right; }
   .m-item--right {
     width: 50%;
+    background-color: #ffe13e;
     float: left; }
-
-.action-block {
-  height: 100%;
-  width: 100%;
-  background-color: #ffe13e; }
+    .m-item--right__serv {
+      float: left; }
 
 .c-wrapp {
   max-width: 1170px;
   height: 100%;
   background-color: #ccc;
   margin: 0 auto; }
+
+.slide {
+  width: 100%;
+  background: #eee url("../img/bg-slide.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  height: 794px; }
+
+.action_block {
+  font-family: "Raleway", sans-serif;
+  color: #fff; }
+  .action_block .action-img {
+    width: 170px;
+    height: 170px;
+    background-color: red;
+    margin: 0 auto 50px; }
+  .action_block .action-title {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 20px; }
+  .action_block .action-text {
+    margin: 0 85px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 30px; }
+  .action_block .action-btn {
+    box-sizing: border-box;
+    width: 155px;
+    display: block;
+    padding: 20px 55px;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 auto;
+    border: 3px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease-out; }
+    .action_block .action-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: all .2s ease-out; }

@@ -1,12 +1,26 @@
 %outline {
   outline:1px solid #777;
-  height:500px;
+  // height:500px;
 }
 %header {
   height:147px;
 }
+%clear {
+  content:'';
+  display: table;
+  clear: both;
+}
+%services {
+  @extend %outline;
+  width:585px;
+  // height: 655px;
+  padding-top: 115px;
+  padding-bottom: 105px;
+}
 $bgc: #ccc;
-
+$m-font-dflt: 'Raleway', sans-serif;
+$light-text: #fff;
+$dark-text: #000;
 
 //header
 header.m-item {
@@ -15,6 +29,7 @@ header.m-item {
 .m-item {
   @extend %outline;
   width: 100%;
+
   &::after {
     content:'';
     display: table;
@@ -24,20 +39,30 @@ header.m-item {
   &--left {
     @extend %outline;
     width:50%;
+    background-color: #202242;
     float:left;
+    &__serv {
+      @extend %services;
+      float: right;
+    }
   }
 
   &--right {
     @extend %outline;
     width:50%;
+    background-color: #ffe13e;
     float:left;
+    &__serv {
+      @extend %services;
+      float: left;
+    }
   }
 }
-.action-block {
-  height:100%;
-  width:100%;
-  background-color: #ffe13e;
-}
+// .action-block {
+//   height:100%;
+//   width:100%;
+//   background-color: #ffe13e;
+// }
 
 //main
 .c-wrapp {
@@ -45,4 +70,59 @@ header.m-item {
   height: 100%;
   background-color: $bgc;
   margin: 0 auto;
+}
+.m-item--left::after {
+  @extend %clear;
+}
+.slide {
+  width:100%;
+  background: #eee url('../img/bg-slide.jpg') no-repeat 50% 50%;
+  background-size: cover;
+  height:794px;
+}
+
+//services
+.action_block {
+  font-family: $m-font-dflt;
+  color: $light-text;
+  .action-img {
+    width:170px;
+    height: 170px;
+    background-color: red;
+    margin:0 auto 50px;
+  }
+  .action-title {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .action-text {
+    // width:420px;
+    margin: 0 85px;
+    text-align: center;
+    font-size:14px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  .action-btn {
+    box-sizing: border-box;
+    width: 155px;
+    display: block;
+    padding: 20px 55px;
+    font-size:18px;
+    line-height: 24px;
+    margin: 0 auto;
+    border: 3px solid $light-text;
+    color: $light-text;
+    text-decoration: none;
+    transition: all .2s ease-out;
+    &:hover {
+      background-color: rgba(255,255,255,.1);
+      transition: all .2s ease-out;
+    }
+  }
 }
