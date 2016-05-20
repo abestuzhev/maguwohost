@@ -1,2 +1,11 @@
-body {
-  background-color: #eee; }
+.h_content {
+  outline: 1px solid #ccc; }
+
+.h_content {
+  height: 147px; }
+
+.c-wrapp {
+  width: 1170px;
+  height: 100%;
+  background-color: #eee;
+  margin: 0 auto; }

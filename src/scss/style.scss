@@ -1,5 +1,18 @@
-$color: #eee;
+%outline {
+  outline:1px solid #ccc;
+}
 
-body {
-  background-color: $color;
+
+//header
+.h_content {
+  @extend %outline;
+  height:147px;
+}
+
+//main
+.c-wrapp {
+  width: 1170px;
+  height: 100%;
+  background-color: #eee;
+  margin: 0 auto;
 }
