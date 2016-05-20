@@ -1,11 +1,30 @@
-.h_content {
-  outline: 1px solid #ccc; }
+.m-item, .m-item--left, .m-item--right {
+  outline: 1px solid #777;
+  height: 500px; }
 
-.h_content {
+header.m-item {
   height: 147px; }
 
-.c-wrapp {
-  width: 1170px;
+.m-item {
+  width: 100%; }
+  .m-item::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .m-item--left {
+    width: 50%;
+    float: left; }
+  .m-item--right {
+    width: 50%;
+    float: left; }
+
+.action-block {
   height: 100%;
-  background-color: #eee;
+  width: 100%;
+  background-color: #ffe13e; }
+
+.c-wrapp {
+  max-width: 1170px;
+  height: 100%;
+  background-color: #ccc;
   margin: 0 auto; }

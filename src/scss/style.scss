@@ -1,18 +1,48 @@
 %outline {
-  outline:1px solid #ccc;
+  outline:1px solid #777;
+  height:500px;
 }
+%header {
+  height:147px;
+}
+$bgc: #ccc;
 
 
 //header
-.h_content {
-  @extend %outline;
+header.m-item {
   height:147px;
+}
+.m-item {
+  @extend %outline;
+  width: 100%;
+  &::after {
+    content:'';
+    display: table;
+    clear: both;
+  }
+
+  &--left {
+    @extend %outline;
+    width:50%;
+    float:left;
+  }
+
+  &--right {
+    @extend %outline;
+    width:50%;
+    float:left;
+  }
+}
+.action-block {
+  height:100%;
+  width:100%;
+  background-color: #ffe13e;
 }
 
 //main
 .c-wrapp {
-  width: 1170px;
+  max-width: 1170px;
   height: 100%;
-  background-color: #eee;
+  background-color: $bgc;
   margin: 0 auto;
 }

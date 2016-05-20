@@ -22,8 +22,8 @@ var srcDir = 'src/';
 
 gulp.task('sass', function(){
   return gulp.src(srcDir + 'scss/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(plumber())
-    .pipe(sass())
     .pipe(prefix('last 3 version'))
     .pipe(gulp.dest('css/'))
     .pipe(browserSync.stream())
