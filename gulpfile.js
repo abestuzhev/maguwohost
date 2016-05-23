@@ -5,7 +5,9 @@ var gulp = require('gulp'),
     // inlineimage = require('gulp-inline-image'),
     prefix = require('gulp-autoprefixer'),
     plumber = require('gulp-plumber'),
-    browserSync = require('browser-sync').create();
+    livereload = require('gulp-livereload'),
+    connect = require('gulp-connect');
+    // browserSync = require('browser-sync').create();
     // concat = require('gulp-concat');
 
 //plugins for buld
@@ -26,23 +28,32 @@ gulp.task('sass', function(){
     .pipe(plumber())
     .pipe(prefix('last 3 version'))
     .pipe(gulp.dest('css/'))
-    .pipe(browserSync.stream())
+    .pipe(connect.reload());
+    // .pipe(browserSync.stream())
 });
 
 gulp.task('html', function(){
   return gulp.src('**/*.html')
     .pipe(plumber())
     .pipe(gulp.dest('**/*.html'))
-    .pipe(browserSync.stream())
+    .pipe(connect.reload());
+    // .pipe(browserSync.stream())
 });
 
-gulp.task('browser-sync', function(){
-  browserSync.init({
-    port: 1337,
-    server: {
-      baseDir: ''
-    }
-  })
+// gulp.task('browser-sync', function(){
+//   browserSync.init({
+//     port: 1337,
+//     server: {
+//       baseDir: ''
+//     }
+//   })
+// });
+
+gulp.task('connect', function() {
+  connect.server({
+    root: '',
+    livereload: true
+  });
 });
 
 gulp.task('watch', function(){
@@ -50,4 +61,4 @@ gulp.task('watch', function(){
   gulp.watch('**/*.html', ['html'])
 });
 
-gulp.task('default', ['sass', 'html', 'watch', 'browser-sync'])
+gulp.task('default', ['sass', 'html', 'connect', 'watch'])

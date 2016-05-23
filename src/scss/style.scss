@@ -17,6 +17,7 @@
   padding-top: 115px;
   padding-bottom: 105px;
 }
+
 $bgc: #ccc;
 $m-font-dflt: 'Raleway', sans-serif;
 $light-text: #fff;
@@ -71,7 +72,8 @@ header.m-item {
   background-color: $bgc;
   margin: 0 auto;
 }
-.m-item--left::after {
+.m-item--left::after,
+.m-item--right::after {
   @extend %clear;
 }
 .slide {
@@ -124,5 +126,17 @@ header.m-item {
       background-color: rgba(255,255,255,.1);
       transition: all .2s ease-out;
     }
+  }
+}
+
+//features
+.features {
+  width:100%;
+  background: #fbf8f1 url('../../img/bg-features.jpg') no-repeat 50% 50%;
+  padding:100px 0 120px;
+  &__title {
+    font-size: 48px;
+    line-height: 24px;
+    font-weight: 700;
   }
 }
