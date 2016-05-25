@@ -104,6 +104,12 @@ header.m-item {
     line-height: 24px;
     text-align: center;
     margin-bottom: 85px; }
+  .features__list {
+    width: 100%; }
+    .features__list::after {
+      content: '';
+      width: 100%;
+      display: inline-block; }
   .features-item {
     width: 240px;
     padding: 0 15px;

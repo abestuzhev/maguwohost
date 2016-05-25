@@ -157,12 +157,23 @@ header.m-item {
     text-align: center;
     margin-bottom: 85px;
   }
+
+  &__list {
+    width:100%;
+    &::after {
+      content: '';
+      width:100%;
+      display: inline-block;
+    }
+  }
+
   &-item {
     @extend %outline;
     width: 240px;
     padding: 0 15px;
     text-align: center;
     display: inline-block;
+
 
     &__img {
       padding-bottom: 38px;

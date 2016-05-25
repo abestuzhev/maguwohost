@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     prefix = require('gulp-autoprefixer'),
     plumber = require('gulp-plumber'),
     livereload = require('gulp-livereload'),
-    connect = require('gulp-connect');
+    // connect = require('gulp-connect');
     browserSync = require('browser-sync').create();
     // concat = require('gulp-concat');
 
