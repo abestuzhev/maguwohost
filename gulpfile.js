@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     livereload = require('gulp-livereload'),
     connect = require('gulp-connect');
-    // browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create();
     // concat = require('gulp-concat');
 
 //plugins for buld
@@ -25,29 +25,28 @@ var srcDir = 'src/';
 gulp.task('sass', function(){
   return gulp.src(srcDir + 'scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(plumber())
+    // .pipe(plumber())
     .pipe(prefix('last 3 version'))
     .pipe(gulp.dest('css/'))
-    .pipe(connect.reload());
-    // .pipe(browserSync.stream())
+    // .pipe(connect.reload());
+    .pipe(browserSync.stream())
 });
 
 gulp.task('html', function(){
   return gulp.src('**/*.html')
-    .pipe(plumber())
     .pipe(gulp.dest('**/*.html'))
-    .pipe(connect.reload());
-    // .pipe(browserSync.stream())
+    // .pipe(connect.reload());
+    .pipe(browserSync.stream())
 });
 
-// gulp.task('browser-sync', function(){
-//   browserSync.init({
-//     port: 1337,
-//     server: {
-//       baseDir: ''
-//     }
-//   })
-// });
+gulp.task('browser-sync', function(){
+  browserSync.init({
+    port: 1337,
+    server: {
+      baseDir: ''
+    }
+  })
+});
 
 gulp.task('connect', function() {
   connect.server({
@@ -61,4 +60,4 @@ gulp.task('watch', function(){
   gulp.watch('**/*.html', ['html'])
 });
 
-gulp.task('default', ['sass', 'html', 'connect', 'watch'])
+gulp.task('default', ['html', 'sass', 'browser-sync', 'watch'])

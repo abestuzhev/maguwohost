@@ -1,3 +1,6 @@
+
+@import 'fonts';
+
 %outline {
   outline:1px solid #777;
   // height:500px;
@@ -19,10 +22,16 @@
 }
 
 $bgc: #ccc;
-$m-font-dflt: 'Raleway', sans-serif;
 $light-text: #fff;
 $dark-text: #000;
+$accent-text: #f4d320;
+$accent-font: 'Rockwell', monospace;
+$default-text: #202242;
+$default-font: 'Raleway', sans-serif;
 
+html {
+  font-family: $default-font;
+}
 //header
 header.m-item {
   height:147px;
@@ -85,7 +94,7 @@ header.m-item {
 
 //services
 .action_block {
-  font-family: $m-font-dflt;
+  font-family: $default-font;
   color: $light-text;
   .action-img {
     width:170px;
@@ -132,11 +141,57 @@ header.m-item {
 //features
 .features {
   width:100%;
-  background: #fbf8f1 url('../../img/bg-features.jpg') no-repeat 50% 50%;
+  background: #fbf8f1 url('../../img/bg-features.png') no-repeat 50% 50%;
   padding:100px 0 120px;
+
   &__title {
     font-size: 48px;
     line-height: 24px;
     font-weight: 700;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 85px;
+  }
+  &-item {
+    @extend %outline;
+    width: 240px;
+    padding: 0 15px;
+    text-align: center;
+    display: inline-block;
+
+    &__img {
+      padding-bottom: 38px;
+      position: relative;
+
+      &::after {
+        content:'';
+        width:70px;
+        height: 3px;
+        background-color: #8d8d99;
+        position: absolute;
+        bottom: 0;
+        left:50%;
+        margin-left: -35px;
+      }
+    }
+
+    &__title {
+      // font-size: 30px;
+      // line-height: 24px;
+      margin-bottom: 20px;
+      color: $accent-text;
+      font: 30px/24px $accent-font;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 24px;
+      color: $default-text;
+    }
   }
 }
