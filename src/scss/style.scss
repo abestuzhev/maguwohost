@@ -160,6 +160,7 @@ header.m-item {
 
   &__list {
     width:100%;
+    text-align: justify;
     &::after {
       content: '';
       width:100%;

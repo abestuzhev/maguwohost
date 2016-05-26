@@ -105,7 +105,8 @@ header.m-item {
     text-align: center;
     margin-bottom: 85px; }
   .features__list {
-    width: 100%; }
+    width: 100%;
+    text-align: justify; }
     .features__list::after {
       content: '';
       width: 100%;
