@@ -3,11 +3,11 @@
   font-family: Rockwell;
   src: url("../../fonts/rockwell.ttf"); }
 
-.m-item--left__serv, .m-item--right__serv, .m-item, .m-item--left, .m-item--right, .features-item {
+.m-item--left__serv, .m-item--right__serv, .m-item, .m-item--left, .m-item--right, .features-item, .clients__about, .clients__list {
   outline: 1px solid #777; }
 
 .m-item--left::after,
-.m-item--right::after {
+.m-item--right::after, .clients::after {
   content: '';
   display: table;
   clear: both; }
@@ -92,7 +92,7 @@ header.m-item {
 
 .features {
   width: 100%;
-  background: #fbf8f1 url("../../img/bg-features.png") no-repeat 50% 50%;
+  background: #fbf8f1 url("../../img/bg-features.png") no-repeat 50% 100%;
   padding: 100px 0 120px; }
   .features__title {
     font-size: 48px;
@@ -136,3 +136,24 @@ header.m-item {
       font-size: 14px;
       line-height: 24px;
       color: #202242; }
+
+.clients {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 60px; }
+  .clients__about {
+    width: 370px;
+    float: left; }
+  .clients__list {
+    width: 770px;
+    float: right;
+    text-align: justify; }
+    .clients__list::after {
+      content: '';
+      display: inline-block;
+      width: 100%; }
+    .clients__list .clients-item {
+      width: 170px;
+      height: 115px;
+      background-color: #faf9f9;
+      display: inline-block; }

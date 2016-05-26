@@ -28,6 +28,7 @@ $accent-text: #f4d320;
 $accent-font: 'Rockwell', monospace;
 $default-text: #202242;
 $default-font: 'Raleway', sans-serif;
+$gray-bg: #faf9f9;
 
 html {
   font-family: $default-font;
@@ -141,7 +142,7 @@ header.m-item {
 //features
 .features {
   width:100%;
-  background: #fbf8f1 url('../../img/bg-features.png') no-repeat 50% 50%;
+  background: #fbf8f1 url('../../img/bg-features.png') no-repeat 50% 100%;
   padding:100px 0 120px;
 
   &__title {
@@ -206,4 +207,42 @@ header.m-item {
       color: $default-text;
     }
   }
+}
+//clients
+.clients {
+  width:100%;
+  padding-top: 80px;
+  padding-bottom: 60px;
+
+  &::after {
+    @extend %clear;
+  }
+
+  &__about {
+    @extend %outline;
+    width:370px;
+    float: left;
+  }
+
+  &__list {
+    @extend %outline;
+    width: 770px;
+    float: right;
+    text-align: justify;
+
+    &::after {
+      content:'';
+      display: inline-block;
+      width: 100%;
+    }
+
+    .clients-item {
+      width:170px;
+      height: 115px;
+      background-color: $gray-bg;
+      display: inline-block;
+    }
+  }
+
+
 }
