@@ -6,10 +6,15 @@
 .m-item--left__serv, .m-item--right__serv, .m-item, .m-item--left, .m-item--right, .features-item, .clients__about, .clients__list {
   outline: 1px solid #777; }
 
-.m-item--left::after,
-.m-item--right::after, .clients::after {
+.clients-wrap::after, .clients__list::after {
   content: '';
-  display: table;
+  display: inline-block;
+  width: 100%; }
+
+.m-item--left::after,
+.m-item--right::after, .clients::after, .clients-wrap::after {
+  content: '';
+  display: inline-block;
   clear: both; }
 
 .m-item--left__serv, .m-item--right__serv {
@@ -140,20 +145,44 @@ header.m-item {
 .clients {
   width: 100%;
   padding-top: 80px;
-  padding-bottom: 60px; }
+  padding-bottom: 30px; }
+  .clients-wrap {
+    margin-bottom: 88px;
+    width: 100%;
+    text-align: justify; }
   .clients__about {
     width: 370px;
     float: left; }
   .clients__list {
     width: 770px;
     float: right;
-    text-align: justify; }
-    .clients__list::after {
-      content: '';
-      display: inline-block;
-      width: 100%; }
+    text-align: justify;
+    font-size: 0; }
     .clients__list .clients-item {
       width: 170px;
       height: 115px;
       background-color: #faf9f9;
       display: inline-block; }
+  .clients .reviews-item {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 30px 30px 25px 20px;
+    width: 370px;
+    background-color: #faf9f9;
+    font: 14px/24px "Rockwell", monospace;
+    font-style: italic;
+    color: #adadad; }
+    .clients .reviews-item__signature {
+      font: bold 16px/24px "Raleway", sans-serif; }
+    .clients .reviews-item__user {
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      bottom: 0%;
+      right: 25px;
+      margin-bottom: -45px;
+      border-radius: 50%;
+      border: 5px solid #202242;
+      border: 5px solid rgba(32, 34, 66, 0.11);
+      background: #eee url("../../img/user-1.png") no-repeat 0 0; }

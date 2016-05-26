@@ -33,8 +33,8 @@ gulp.task('sass', function(){
 });
 
 gulp.task('html', function(){
-  return gulp.src('**/*.html')
-    .pipe(gulp.dest('**/*.html'))
+  return gulp.src('*.html')
+    .pipe(gulp.dest('*.html'))
     // .pipe(connect.reload());
     .pipe(browserSync.stream())
 });
@@ -57,7 +57,7 @@ gulp.task('connect', function() {
 
 gulp.task('watch', function(){
   gulp.watch(srcDir + 'scss/**/*.scss', ['sass'])
-  gulp.watch('**/*.html', ['html'])
+  gulp.watch('*.html', ['html'])
 });
 
 gulp.task('default', ['html', 'sass', 'browser-sync', 'watch'])

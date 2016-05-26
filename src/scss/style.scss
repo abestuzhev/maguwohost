@@ -5,12 +5,19 @@
   outline:1px solid #777;
   // height:500px;
 }
-%header {
-  height:147px;
+
+%inline-justufy {
+  content:'';
+  display: inline-block;
+  width: 100%;
 }
+//
+// %header {
+//   height:147px;
+// }
 %clear {
   content:'';
-  display: table;
+  display: inline-block;
   clear: both;
 }
 %services {
@@ -29,6 +36,7 @@ $accent-font: 'Rockwell', monospace;
 $default-text: #202242;
 $default-font: 'Raleway', sans-serif;
 $gray-bg: #faf9f9;
+$clients-color: #adadad;
 
 html {
   font-family: $default-font;
@@ -212,10 +220,21 @@ header.m-item {
 .clients {
   width:100%;
   padding-top: 80px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 
-  &::after {
+  &::after,
+  &-wrap::after {
     @extend %clear;
+  }
+
+  &-wrap {
+    margin-bottom: 88px;
+    width: 100%;
+    text-align: justify;
+
+    &::after {
+      @extend %inline-justufy;
+    }
   }
 
   &__about {
@@ -229,11 +248,10 @@ header.m-item {
     width: 770px;
     float: right;
     text-align: justify;
+    font-size: 0;
 
     &::after {
-      content:'';
-      display: inline-block;
-      width: 100%;
+      @extend %inline-justufy;
     }
 
     .clients-item {
@@ -243,6 +261,43 @@ header.m-item {
       display: inline-block;
     }
   }
+  // &-reviews__list {
+  //   @extend %outline;
+  //   margin-top: 88px;
+  //   text-align: justify;
+  //   font-size: 0;
+  //
+  //   &::after {
+  //     @extend %inline-justufy;
+  //   }
+  // }
 
+  .reviews-item {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 30px 30px 25px 20px;
+    width:370px;
+    background-color: $gray-bg;
+    font: 14px/24px $accent-font;
+    font-style: italic;
+    color: $clients-color;
 
+    &__signature {
+      font: bold 16px/24px $default-font;
+    }
+
+    &__user {
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      bottom:0%;
+      right:25px;
+      margin-bottom:-45px;
+      border-radius: 50%;
+      border: 5px solid #202242;
+      border: 5px solid rgba(32, 34, 66, 0.11);
+      background: #eee url('../../img/user-1.png') no-repeat 0 0;
+    }
+  }
 }
