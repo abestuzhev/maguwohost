@@ -33,7 +33,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('html', function(){
-  return gulp.src('**/.html')
+  return gulp.src('**/*.html')
     .pipe(gulp.dest('**/*.html'))
     // .pipe(connect.reload());
     .pipe(browserSync.stream())
@@ -41,7 +41,7 @@ gulp.task('html', function(){
 
 gulp.task('browser-sync', function(){
   browserSync.init({
-    port: 1337,
+    port: 8888,
     server: {
       baseDir: ''
     }
@@ -57,7 +57,7 @@ gulp.task('connect', function() {
 
 gulp.task('watch', function(){
   gulp.watch(srcDir + 'scss/**/*.scss', ['sass'])
-  gulp.watch('**/.html', ['html'])
+  gulp.watch('**/*.html', ['html'])
 });
 
 gulp.task('default', ['html', 'sass', 'browser-sync', 'watch'])
