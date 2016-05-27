@@ -17,7 +17,7 @@
 // }
 %clear {
   content:'';
-  display: inline-block;
+  display: table;
   clear: both;
 }
 %services {
@@ -37,6 +37,8 @@ $default-text: #202242;
 $default-font: 'Raleway', sans-serif;
 $gray-bg: #faf9f9;
 $clients-color: #adadad;
+$accent-bgc: #ffe13e;
+$gray-color: #363855;
 
 html {
   font-family: $default-font;
@@ -69,7 +71,7 @@ header.m-item {
   &--right {
     @extend %outline;
     width:50%;
-    background-color: #ffe13e;
+    background-color: $accent-bgc;
     float:left;
     &__serv {
       @extend %services;
@@ -89,6 +91,10 @@ header.m-item {
   height: 100%;
   background-color: $bgc;
   margin: 0 auto;
+
+  &::after {
+    @extend %clear;
+  }
 }
 .m-item--left::after,
 .m-item--right::after {
@@ -237,6 +243,16 @@ header.m-item {
     }
   }
 
+  &-reviews {
+    text-align: justify;
+    width: 100%;
+    margin-bottom: 110px;
+
+    &::after {
+      @extend %inline-justufy;
+    }
+  }
+
   &__about {
     @extend %outline;
     width:370px;
@@ -283,6 +299,10 @@ header.m-item {
     font-style: italic;
     color: $clients-color;
 
+    &__text {
+      text-align: left;
+    }
+
     &__signature {
       font: bold 16px/24px $default-font;
     }
@@ -298,6 +318,56 @@ header.m-item {
       border: 5px solid #202242;
       border: 5px solid rgba(32, 34, 66, 0.11);
       background: #eee url('../../img/user-1.png') no-repeat 0 0;
+    }
+  }
+}
+
+//Plans
+.plans {
+  padding: 90px 120px;
+  background-color: $default-text;
+
+  &::after {
+    @extend %clear;
+  }
+
+  &__question {
+    box-sizing: border-box;
+    float:left;
+    color: $light-text;
+    padding: 2% 0;
+
+    &::after {
+      @extend %clear;
+    }
+
+    .question__title {
+      font-size: 36px;
+      line-height: 24px;
+      margin: 0 0 15px;
+    }
+    .question__subtitle{
+      font-size:18px;
+      line-height: 24px;
+      color: #676991;
+    }
+  }
+
+  &__btn {
+    float: right;
+
+    &::after {
+      @extend %clear;
+    }
+
+    a {
+      display: block;
+      padding: 30px 60px;
+      background-color: $accent-bgc;
+      border: 4px solid #fff;
+      color: $dark-text;
+      font-weight: bold;
+      text-decoration: none;
     }
   }
 }

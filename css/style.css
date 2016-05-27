@@ -6,15 +6,15 @@
 .m-item--left__serv, .m-item--right__serv, .m-item, .m-item--left, .m-item--right, .features-item, .clients__about, .clients__list {
   outline: 1px solid #777; }
 
-.clients-wrap::after, .clients__list::after {
+.clients-wrap::after, .clients-reviews::after, .clients__list::after {
   content: '';
   display: inline-block;
   width: 100%; }
 
-.m-item--left::after,
-.m-item--right::after, .clients::after, .clients-wrap::after {
+.c-wrapp::after, .m-item--left::after,
+.m-item--right::after, .clients::after, .clients-wrap::after, .plans::after, .plans__question::after, .plans__btn::after {
   content: '';
-  display: inline-block;
+  display: table;
   clear: both; }
 
 .m-item--left__serv, .m-item--right__serv {
@@ -150,6 +150,10 @@ header.m-item {
     margin-bottom: 88px;
     width: 100%;
     text-align: justify; }
+  .clients-reviews {
+    text-align: justify;
+    width: 100%;
+    margin-bottom: 110px; }
   .clients__about {
     width: 370px;
     float: left; }
@@ -173,6 +177,8 @@ header.m-item {
     font: 14px/24px "Rockwell", monospace;
     font-style: italic;
     color: #adadad; }
+    .clients .reviews-item__text {
+      text-align: left; }
     .clients .reviews-item__signature {
       font: bold 16px/24px "Raleway", sans-serif; }
     .clients .reviews-item__user {
@@ -186,3 +192,30 @@ header.m-item {
       border: 5px solid #202242;
       border: 5px solid rgba(32, 34, 66, 0.11);
       background: #eee url("../../img/user-1.png") no-repeat 0 0; }
+
+.plans {
+  padding: 90px 120px;
+  background-color: #202242; }
+  .plans__question {
+    box-sizing: border-box;
+    float: left;
+    color: #fff;
+    padding: 2% 0; }
+    .plans__question .question__title {
+      font-size: 36px;
+      line-height: 24px;
+      margin: 0 0 15px; }
+    .plans__question .question__subtitle {
+      font-size: 18px;
+      line-height: 24px;
+      color: #676991; }
+  .plans__btn {
+    float: right; }
+    .plans__btn a {
+      display: block;
+      padding: 30px 60px;
+      background-color: #ffe13e;
+      border: 4px solid #fff;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none; }
