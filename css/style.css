@@ -3,7 +3,7 @@
   font-family: Rockwell;
   src: url("../../fonts/rockwell.ttf"); }
 
-.m-item--left__serv, .m-item--right__serv, .m-item, .m-item--left, .m-item--right, .features-item, .clients__about, .clients__list {
+.m-item--left__serv, .m-item--right__serv, .m-item, .m-item--left, .m-item--right, .c-wrapp, .features-item, .clients__about, .clients__list {
   outline: 1px solid #777; }
 
 .clients-wrap::after, .clients-reviews::after, .clients__list::after {
@@ -50,7 +50,6 @@ header.m-item {
 .c-wrapp {
   max-width: 1170px;
   height: 100%;
-  background-color: #ccc;
   margin: 0 auto; }
 
 .slide {
@@ -219,3 +218,9 @@ header.m-item {
       color: #000;
       font-weight: bold;
       text-decoration: none; }
+
+footer.m-item {
+  height: 657px;
+  width: 100%;
+  background: #363855 url("../img/footer-bg.jpg") no-repeat 0 0;
+  background-size: cover; }

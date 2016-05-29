@@ -34,7 +34,6 @@ gulp.task('sass', function(){
 
 gulp.task('html', function(){
   return gulp.src('**/*.html')
-    .pipe(gulp.dest('**/*.html'))
     // .pipe(connect.reload());
     .pipe(browserSync.stream())
 });

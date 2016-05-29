@@ -87,9 +87,10 @@ header.m-item {
 
 //main
 .c-wrapp {
+  @extend %outline;
   max-width: 1170px;
   height: 100%;
-  background-color: $bgc;
+  // background-color: $bgc;
   margin: 0 auto;
 
   &::after {
@@ -370,4 +371,12 @@ header.m-item {
       text-decoration: none;
     }
   }
+}
+
+//footer
+footer.m-item {
+  height:657px;
+  width: 100%;
+  background: #363855 url('../img/footer-bg.jpg') no-repeat 0 0;
+  background-size: cover;
 }
