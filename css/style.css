@@ -12,7 +12,7 @@
   width: 100%; }
 
 .c-wrapp::after, .m-item--left::after,
-.m-item--right::after, .clients::after, .clients-wrap::after, .plans::after, .plans__question::after, .plans__btn::after {
+.m-item--right::after, .clients::after, .clients-wrap::after, .plans::after, .plans__question::after, .plans__btn::after, footer.m-item .footer__nav::after {
   content: '';
   display: table;
   clear: both; }
@@ -224,3 +224,14 @@ footer.m-item {
   width: 100%;
   background: #363855 url("../img/footer-bg.jpg") no-repeat 0 0;
   background-size: cover; }
+  footer.m-item .footer__nav {
+    text-align: right;
+    float: right; }
+    footer.m-item .footer__nav-list {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+  footer.m-item .footer__copyright {
+    text-align: center; }
+    footer.m-item .footer__copyright-text {
+      color: #fff; }

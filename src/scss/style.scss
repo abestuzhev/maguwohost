@@ -379,4 +379,27 @@ footer.m-item {
   width: 100%;
   background: #363855 url('../img/footer-bg.jpg') no-repeat 0 0;
   background-size: cover;
+
+  .footer__nav {
+    text-align: right;
+    float: right;
+
+    &::after {
+      @extend %clear;
+    }
+
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  .footer__copyright {
+    text-align: center;
+
+    &-text {
+      color: $light-text;
+    }
+  }
 }
