@@ -20,6 +20,7 @@
   display: table;
   clear: both;
 }
+
 %services {
   @extend %outline;
   width:585px;
@@ -88,6 +89,7 @@ header.m-item {
 //main
 .c-wrapp {
   @extend %outline;
+  position: relative;
   max-width: 1170px;
   height: 100%;
   // background-color: $bgc;
@@ -110,14 +112,30 @@ header.m-item {
 
 //services
 .action_block {
-  font-family: $default-font;
+  // font-family: $default-font;
   color: $light-text;
   .action-img {
+    position: relative;
+    // text-align: center;
     width:170px;
     height: 170px;
-    background-color: red;
+    // background-color: red;
     margin:0 auto 50px;
+
+    &--left {
+      background: url('../img/services-icon.png') no-repeat 50% 50%;
+    }
+    &--right {
+      position: absolute;
+      top:30%;
+      left:-40%;
+      font-size: 134px;
+      font-weight: bold;
+      line-height: 44px;
+      color: $dark-text;
+    }
   }
+
   .action-title {
     font-size: 36px;
     font-weight: bold;
@@ -160,6 +178,10 @@ header.m-item {
   background: #fbf8f1 url('../../img/bg-features.png') no-repeat 50% 100%;
   padding:100px 0 120px;
 
+  &-bgc {
+    background-color: #fbf8f1;
+  }
+
   &__title {
     font-size: 48px;
     line-height: 24px;
@@ -186,8 +208,8 @@ header.m-item {
 
   &-item {
     @extend %outline;
-    width: 240px;
-    padding: 0 15px;
+    width: 260px;
+    padding: 0 5px;
     text-align: center;
     display: inline-block;
 
@@ -328,6 +350,10 @@ header.m-item {
   padding: 90px 120px;
   background-color: $default-text;
 
+  &-bgc {
+    background-color: $default-text;
+  }
+
   &::after {
     @extend %clear;
   }
@@ -375,31 +401,98 @@ header.m-item {
 
 //footer
 footer.m-item {
-  height:657px;
   width: 100%;
   background: #363855 url('../img/footer-bg.jpg') no-repeat 0 0;
   background-size: cover;
+  color: $light-text;
 
   .footer__nav {
+    margin-top: 140px;
     text-align: right;
     float: right;
+    margin-bottom: 25px;
 
     &::after {
       @extend %clear;
     }
 
+    &-title {
+      font-size: 18px;
+      margin: 0;
+      margin-bottom: 35px;
+    }
+
     &-list {
       margin: 0;
+      padding-left: 30px;
       padding: 0;
       list-style: none;
     }
+
+    &-item a{
+      display: block;
+      font-size: 16px;
+      color: $light-text;
+      padding: 10px 0;
+      text-decoration: none;
+      transition: all .2s ease-out;
+      border-bottom: 1px solid #fff;//for ie
+      border-bottom: 1px solid rgba(255,255,255,0.16);
+
+      &:hover {
+        color: $accent-bgc;
+        transition: all .2s ease-out;
+      }
+    }
+    &-back {
+      font-size: 12px;
+      text-decoration: none;
+      color: $light-text;
+      transition: all .2s ease-out;
+
+      &:hover {
+        color: $accent-bgc;
+        transition: all .2s ease-out;
+      }
+    }
   }
+  .footer__social {
+      list-style: none;
+      margin-bottom: 60px;;
+
+      &-item {
+        display: inline-block;
+        margin-left: 20px;
+
+        a {
+          color:$accent-bgc;
+          transition: all .2s ease-out;
+
+          &:hover {
+            color: $light-text;
+            transition: all .2s ease-out;
+          }
+        }
+      }
+  }
+
 
   .footer__copyright {
     text-align: center;
+    width:100%;
+    float: left;
+    margin-bottom: 70px;
+
+    &::after {
+      @extend %clear;
+    }
+    // position: absolute;
+    // bottom: 70px;
+    // left:50%;
+    // margin-left:120px;
 
     &-text {
-      color: $light-text;
+      // color: $light-text;
     }
   }
 }
