@@ -44,10 +44,94 @@ $gray-color: #363855;
 html {
   font-family: $default-font;
 }
+
+
+
 //header
 header.m-item {
   height:147px;
 }
+
+.header {
+  padding: 35px 0 30px 0;
+  color:$dark-text;
+
+  &::after {
+    @extend %clear;
+  }
+
+  &__logo {
+    margin-top:30px;
+    float:left;
+    vertical-align: baseline;
+    margin-right: 60px;
+
+    &__text {
+      font:26px/24px $accent-font;
+      padding-left: 44px;
+      position: relative;
+
+      &::before {
+        content:'';
+        position: absolute;
+        top:0;
+        left:0;
+        width: 26px;
+        height: 32px;
+        background-color: red;
+        background: url('../img/logo.png') no-repeat 50% 50%;
+      }
+    }
+  }
+
+  &__menu {
+    list-style: none;
+    // margin: 0 440px 0 265px;
+    margin: 0;
+
+    margin-top:35px;
+    padding: 0;
+    float: left;
+
+    .activ a{
+      color: $accent-text;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+
+    a {
+      color: $dark-text;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0 10px;
+      font-size:16px;
+    }
+  }
+
+  &__contact {
+    float: right;
+    background-color: #eee;
+
+    &__question {
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+
+    &__btn {
+      float: left;
+    }
+
+    &__number {
+      float: right;
+      text-align: center;
+    }
+  }
+}
+
 .m-item {
   @extend %outline;
   width: 100%;

@@ -11,7 +11,7 @@
   display: inline-block;
   width: 100%; }
 
-.c-wrapp::after, .m-item--left::after,
+.header::after, .c-wrapp::after, .m-item--left::after,
 .m-item--right::after, .clients::after, .clients-wrap::after, .plans::after, .plans__question::after, .plans__btn::after, footer.m-item .footer__nav::after, footer.m-item .footer__copyright::after {
   content: '';
   display: table;
@@ -27,6 +27,57 @@ html {
 
 header.m-item {
   height: 147px; }
+
+.header {
+  padding: 35px 0 30px 0;
+  color: #000; }
+  .header__logo {
+    margin-top: 30px;
+    float: left;
+    vertical-align: baseline;
+    margin-right: 60px; }
+    .header__logo__text {
+      font: 26px/24px "Rockwell", monospace;
+      padding-left: 44px;
+      position: relative; }
+      .header__logo__text::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 26px;
+        height: 32px;
+        background-color: red;
+        background: url("../img/logo.png") no-repeat 50% 50%; }
+  .header__menu {
+    list-style: none;
+    margin: 0;
+    margin-top: 35px;
+    padding: 0;
+    float: left; }
+    .header__menu .activ a {
+      color: #f4d320; }
+  .header__item {
+    display: inline-block; }
+    .header__item a {
+      color: #000;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0 10px;
+      font-size: 16px; }
+  .header__contact {
+    float: right;
+    background-color: #eee; }
+    .header__contact__question {
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 24px;
+      margin-bottom: 20px; }
+    .header__contact__btn {
+      float: left; }
+    .header__contact__number {
+      float: right;
+      text-align: center; }
 
 .m-item {
   width: 100%; }
