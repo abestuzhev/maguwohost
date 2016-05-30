@@ -112,7 +112,6 @@ header.m-item {
 
   &__contact {
     float: right;
-    background-color: #eee;
 
     &__question {
       font-size: 12px;
@@ -123,12 +122,47 @@ header.m-item {
 
     &__btn {
       float: left;
+
+      a {
+        display: block;
+        text-decoration: none;
+        background-color: $accent-bgc;
+        color: $dark-text;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 10px 30px;
+      }
     }
 
     &__number {
       float: right;
       text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      padding-left: 20px;
+      border-left: 1px solid rgba($default-text,.31);
     }
+  }
+}
+
+.slide {
+  text-align: center;
+  color: $light-text;
+  padding: 230px 0 140px 0;
+
+  &::before,
+  &::after {
+    content:'';
+    display: table;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
 }
 
@@ -486,9 +520,13 @@ header.m-item {
 //footer
 footer.m-item {
   width: 100%;
-  background: #363855 url('../img/footer-bg.jpg') no-repeat 0 0;
-  background-size: cover;
+  background-color: #363855;
   color: $light-text;
+
+  .footer__map {
+    background-size: cover;
+    background: #363855 url('../img/footer-bg.jpg') no-repeat 50% 50%;
+  }
 
   .footer__nav {
     margin-top: 140px;

@@ -66,8 +66,7 @@ header.m-item {
       padding: 0 10px;
       font-size: 16px; }
   .header__contact {
-    float: right;
-    background-color: #eee; }
+    float: right; }
     .header__contact__question {
       font-size: 12px;
       font-weight: 800;
@@ -75,9 +74,34 @@ header.m-item {
       margin-bottom: 20px; }
     .header__contact__btn {
       float: left; }
+      .header__contact__btn a {
+        display: block;
+        text-decoration: none;
+        background-color: #ffe13e;
+        color: #000;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 10px 30px; }
     .header__contact__number {
       float: right;
-      text-align: center; }
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      padding-left: 20px;
+      border-left: 1px solid rgba(32, 34, 66, 0.31); }
+
+.slide {
+  text-align: center;
+  color: #fff;
+  padding: 230px 0 140px 0; }
+  .slide::before, .slide::after {
+    content: '';
+    display: table; }
+  .slide__title {
+    margin-bottom: 30px; }
+  .slide__subtitle {
+    margin-bottom: 50px;
+    margin-bottom: 60px; }
 
 .m-item {
   width: 100%; }
@@ -286,9 +310,11 @@ header.m-item {
 
 footer.m-item {
   width: 100%;
-  background: #363855 url("../img/footer-bg.jpg") no-repeat 0 0;
-  background-size: cover;
+  background-color: #363855;
   color: #fff; }
+  footer.m-item .footer__map {
+    background-size: cover;
+    background: #363855 url("../img/footer-bg.jpg") no-repeat 50% 50%; }
   footer.m-item .footer__nav {
     margin-top: 140px;
     text-align: right;
