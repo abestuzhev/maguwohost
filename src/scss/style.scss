@@ -1,6 +1,19 @@
 
 @import 'fonts';
 
+
+$bgc: #ccc;
+$light-text: #fff;
+$dark-text: #000;
+$accent-text: #f4d320;
+$accent-font: 'Rockwell', monospace;
+$default-text: #202242;
+$default-font: 'Raleway', sans-serif;
+$gray-bg: #faf9f9;
+$clients-color: #adadad;
+$accent-bgc: #ffe13e;
+$gray-color: #363855;
+
 %outline {
   outline:1px solid #777;
   // height:500px;
@@ -11,6 +24,15 @@
   display: inline-block;
   width: 100%;
 }
+%transition {
+  transition: all .2s ease-out;
+}
+
+%hover-btn {
+  opacity: .8;
+  @extend %transition;
+}
+
 //
 // %header {
 //   height:147px;
@@ -29,17 +51,6 @@
   padding-bottom: 105px;
 }
 
-$bgc: #ccc;
-$light-text: #fff;
-$dark-text: #000;
-$accent-text: #f4d320;
-$accent-font: 'Rockwell', monospace;
-$default-text: #202242;
-$default-font: 'Raleway', sans-serif;
-$gray-bg: #faf9f9;
-$clients-color: #adadad;
-$accent-bgc: #ffe13e;
-$gray-color: #363855;
 
 html {
   font-family: $default-font;
@@ -49,7 +60,7 @@ html {
 
 //header
 header.m-item {
-  height:147px;
+  // height:147px;
 }
 
 .header {
@@ -86,7 +97,6 @@ header.m-item {
 
   &__menu {
     list-style: none;
-    // margin: 0 440px 0 265px;
     margin: 0;
 
     margin-top:35px;
@@ -131,6 +141,11 @@ header.m-item {
         font-size: 14px;
         font-weight: bold;
         padding: 10px 30px;
+        @extend %transition;
+
+        &:hover {
+          @extend %hover-btn;
+        }
       }
     }
 
@@ -149,6 +164,9 @@ header.m-item {
   text-align: center;
   color: $light-text;
   padding: 230px 0 140px 0;
+  width:100%;
+  background: #eee url('../img/bg-slide.jpg') no-repeat 50% 50%;
+  background-size: cover;
 
   &::before,
   &::after {
@@ -163,6 +181,32 @@ header.m-item {
   &__subtitle {
     margin-bottom: 50px;
     margin-bottom: 60px;
+  }
+
+  &__img {
+    margin-bottom: 60px;
+  }
+
+  &__domain-name {
+    width: 570px;
+    margin: 0 auto;
+    // height:91px;
+    padding: 18px;
+    box-sizing: border-box;
+    background-color: transparentize($light-text, .5);
+
+    input[type="text"] {
+      display: block;
+      font-size: 18px;
+      outline: 0;
+      border-width: 0;
+      // line-height: 24px;
+      padding: 18px 22px;
+
+      &:focus {
+        outline:2px solid transparentize($default-text, .5);
+      }
+    }
   }
 }
 
@@ -221,23 +265,16 @@ header.m-item {
 .m-item--right::after {
   @extend %clear;
 }
-.slide {
-  width:100%;
-  background: #eee url('../img/bg-slide.jpg') no-repeat 50% 50%;
-  background-size: cover;
-  height:794px;
-}
+
 
 //services
 .action_block {
-  // font-family: $default-font;
   color: $light-text;
+
   .action-img {
     position: relative;
-    // text-align: center;
     width:170px;
     height: 170px;
-    // background-color: red;
     margin:0 auto 50px;
 
     &--left {
@@ -263,7 +300,6 @@ header.m-item {
   }
 
   .action-text {
-    // width:420px;
     margin: 0 85px;
     text-align: center;
     font-size:14px;
@@ -282,10 +318,10 @@ header.m-item {
     border: 3px solid $light-text;
     color: $light-text;
     text-decoration: none;
-    transition: all .2s ease-out;
+    @extend %transition;
+
     &:hover {
-      background-color: rgba(255,255,255,.1);
-      transition: all .2s ease-out;
+      @extend %hover-btn;
     }
   }
 }
@@ -513,6 +549,11 @@ header.m-item {
       color: $dark-text;
       font-weight: bold;
       text-decoration: none;
+      @extend %transition;
+
+      &:hover {
+        @extend %hover-btn;
+      }
     }
   }
 }
@@ -557,24 +598,24 @@ footer.m-item {
       color: $light-text;
       padding: 10px 0;
       text-decoration: none;
-      transition: all .2s ease-out;
+      @extend %transition;
       border-bottom: 1px solid #fff;//for ie
       border-bottom: 1px solid rgba(255,255,255,0.16);
 
       &:hover {
         color: $accent-bgc;
-        transition: all .2s ease-out;
+        @extend %transition;
       }
     }
     &-back {
       font-size: 12px;
       text-decoration: none;
       color: $light-text;
-      transition: all .2s ease-out;
+      @extend %transition;
 
       &:hover {
         color: $accent-bgc;
-        transition: all .2s ease-out;
+        @extend %transition;
       }
     }
   }
@@ -588,11 +629,11 @@ footer.m-item {
 
         a {
           color:$accent-bgc;
-          transition: all .2s ease-out;
+          @extend %transition;
 
           &:hover {
             color: $light-text;
-            transition: all .2s ease-out;
+            @extend %transition;
           }
         }
       }
