@@ -11,10 +11,10 @@
   display: inline-block;
   width: 100%; }
 
-.header__contact__btn a:hover, .action_block .action-btn:hover, .plans__btn a:hover, .header__contact__btn a, .action_block .action-btn, .plans__btn a, footer.m-item .footer__nav-item a, footer.m-item .footer__nav-item a:hover, footer.m-item .footer__nav-back, footer.m-item .footer__nav-back:hover, footer.m-item .footer__social-item a, footer.m-item .footer__social-item a:hover {
+.ik_select_list li:hover, .header__contact__btn a:hover, .slide__btn:hover, .action_block .action-btn:hover, .plans__btn a:hover, .header__contact__btn a, .action_block .action-btn, .plans__btn a, footer.m-item .footer__nav-item a, footer.m-item .footer__nav-item a:hover, footer.m-item .footer__nav-back, footer.m-item .footer__nav-back:hover, footer.m-item .footer__social-item a, footer.m-item .footer__social-item a:hover {
   transition: all .2s ease-out; }
 
-.header__contact__btn a:hover, .action_block .action-btn:hover, .plans__btn a:hover {
+.ik_select_list li:hover, .header__contact__btn a:hover, .slide__btn:hover, .action_block .action-btn:hover, .plans__btn a:hover {
   opacity: .8; }
 
 .header::after, .c-wrapp::after, .m-item--left::after,
@@ -27,6 +27,102 @@
   width: 585px;
   padding-top: 115px;
   padding-bottom: 105px; }
+
+.ik_select {
+  /*
+	Wraps all the plugin's HTML code.
+	Probably you should not add any styles here
+	*/ }
+
+.ik_select_link {
+  background: #ffe13e;
+  font-size: 18px;
+  color: #000;
+  position: relative;
+  padding: 18px 22px;
+  font-weight: bold;
+  cursor: pointer;
+  /* Fake select you click on to open the dropdown */ }
+
+.ik_select_link_focus {
+  /* Focused state of the fake select */ }
+
+.ik_select_link_disabled {
+  /* Disabled state of the fake select */ }
+
+.ik_select_link_text {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+  .ik_select_link_text::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: -8px;
+    width: 10px;
+    height: 15px;
+    background: url("../img/shevron.png") no-repeat 50% 50%; }
+
+.ik_select_dropdown {
+  /*
+		Dropdown wrapper. Needed for script calculations.
+		You should not add any visual styles here.
+		You can shift the position of the dropdown
+		by changing top and left values like
+		top: -2px;
+		left: -5px;
+		*/ }
+
+.ik_select_list {
+  /*
+			Wrapper for the options list.
+			Now that's a good place to add visual styles.
+			*/
+  background: #ffe13e;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+  box-shadow: inset 0px 9px 32px -8px rgba(0, 0, 0, 0.15); }
+  .ik_select_list li {
+    padding: 4px 45px 4px 18px;
+    cursor: pointer; }
+    .ik_select_list li:hover {
+      background-color: #faf9f9; }
+
+.ik_select_list_inner ul {
+  margin: 0;
+  list-style: none;
+  padding: 0; }
+
+.ik_select_optgroup {
+  /* Optgroup */ }
+
+.ik_select_optgroup_label {
+  /* Optgroup label */ }
+
+.ik_select_option {
+  /* Option */ }
+
+.ik_select_option_label {
+  /* Option label */ }
+
+.ik_select_hover {
+  /* The hovered state of an option */ }
+
+.ik_select_active {
+  /* The active state of an option */ }
+
+.ik_select_filter_wrap {
+  /* Wrapper for the filter input */ }
+
+.ik_select_filter {
+  /* Filter input */ }
+
+.ik_nothing_found {
+  /* Block that's shown when there's nothing found. */ }
 
 html {
   font-family: "Raleway", sans-serif; }
@@ -94,7 +190,6 @@ html {
       border-left: 1px solid rgba(32, 34, 66, 0.31); }
 
 .slide {
-  text-align: center;
   color: #fff;
   padding: 230px 0 140px 0;
   width: 100%;
@@ -104,16 +199,20 @@ html {
     content: '';
     display: table; }
   .slide__title {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    text-align: center; }
   .slide__subtitle {
     margin-bottom: 50px;
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+    text-align: center; }
   .slide__img {
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+    text-align: center; }
   .slide__domain-name {
     width: 570px;
     margin: 0 auto;
     padding: 18px;
+    font-size: 0;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.5); }
     .slide__domain-name input[type="text"] {
@@ -124,6 +223,20 @@ html {
       padding: 18px 22px; }
       .slide__domain-name input[type="text"]:focus {
         outline: 2px solid rgba(32, 34, 66, 0.5); }
+  .slide__inline {
+    display: inline-block;
+    text-align: left; }
+  .slide__btn {
+    background-color: #ffe13e;
+    border: none;
+    color: white;
+    padding: 20px 22px 18px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-left: 1px solid #fff; }
 
 .m-item {
   width: 100%; }

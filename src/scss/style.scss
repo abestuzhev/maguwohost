@@ -1,62 +1,14 @@
 
 @import 'fonts';
+@import 'base';
+@import 'ikselect';
 
 
-$bgc: #ccc;
-$light-text: #fff;
-$dark-text: #000;
-$accent-text: #f4d320;
-$accent-font: 'Rockwell', monospace;
-$default-text: #202242;
-$default-font: 'Raleway', sans-serif;
-$gray-bg: #faf9f9;
-$clients-color: #adadad;
-$accent-bgc: #ffe13e;
-$gray-color: #363855;
-
-%outline {
-  outline:1px solid #777;
-  // height:500px;
-}
-
-%inline-justufy {
-  content:'';
-  display: inline-block;
-  width: 100%;
-}
-%transition {
-  transition: all .2s ease-out;
-}
-
-%hover-btn {
-  opacity: .8;
-  @extend %transition;
-}
-
-//
-// %header {
-//   height:147px;
-// }
-%clear {
-  content:'';
-  display: table;
-  clear: both;
-}
-
-%services {
-  @extend %outline;
-  width:585px;
-  // height: 655px;
-  padding-top: 115px;
-  padding-bottom: 105px;
-}
 
 
 html {
   font-family: $default-font;
 }
-
-
 
 //header
 header.m-item {
@@ -161,7 +113,6 @@ header.m-item {
 }
 
 .slide {
-  text-align: center;
   color: $light-text;
   padding: 230px 0 140px 0;
   width:100%;
@@ -176,15 +127,18 @@ header.m-item {
 
   &__title {
     margin-bottom: 30px;
+    text-align: center;
   }
 
   &__subtitle {
     margin-bottom: 50px;
     margin-bottom: 60px;
+    text-align: center;
   }
 
   &__img {
     margin-bottom: 60px;
+    text-align: center;
   }
 
   &__domain-name {
@@ -192,6 +146,8 @@ header.m-item {
     margin: 0 auto;
     // height:91px;
     padding: 18px;
+
+    font-size: 0;
     box-sizing: border-box;
     background-color: transparentize($light-text, .5);
 
@@ -206,6 +162,28 @@ header.m-item {
       &:focus {
         outline:2px solid transparentize($default-text, .5);
       }
+    }
+  }
+
+  &__inline {
+    display: inline-block;
+    text-align: left;
+  }
+
+  &__btn {
+    background-color: $accent-bgc;
+    border: none;
+    color: white;
+    padding: 20px 22px 18px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-left:1px solid $light-text;
+
+    &:hover {
+      @extend %hover-btn;
     }
   }
 }

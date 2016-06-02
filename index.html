@@ -37,7 +37,19 @@
         <div class="slide__img"><img src="img/slide-img.png" alt=""></div>
         <div class="slide__domain-name">
           <form action="">
-            <input type="text" name="name" placeholder="Your Domain Name ...">
+            <div class="slide__inline"><input type="text" name="name" placeholder="Your Domain Name ..."></div>
+            <div class="slide__inline">
+              <select name="com" class="slide__intro">
+                <option value=".com">.com</option>
+                <option value=".ru">.ru</option>
+                <option value=".me">.su</option>
+                <option value=".eu">.eu</option>
+                <option value=".bz">.bz</option>
+              </select>
+            </div>
+            <div class="slide__inline">
+              <button class="slide__btn">Check Availability</button>
+            </div>
           </form>
         </div>
 
@@ -169,5 +181,8 @@
         </div>
     </div>
   </footer>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/ikselect/src/jquery.ikSelect.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

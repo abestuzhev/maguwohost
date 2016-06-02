@@ -16,6 +16,9 @@
   ],
   "dependencies": {
     "normalize-css": "normalize.css#^4.1.1",
-    "font-awesome": "fontawesome#^4.6.3"
+    "font-awesome": "fontawesome#^4.6.3",
+    "jquery-form-styler": "jquery.form-styler#^1.7.5",
+    "jquery": "^2.2.4",
+    "ikselect": "^1.1.0"
   }
 }
