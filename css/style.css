@@ -52,6 +52,7 @@
 
 .ik_select_link_text {
   display: block;
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis; }
   .ik_select_link_text::after {
@@ -123,6 +124,10 @@
 
 .ik_nothing_found {
   /* Block that's shown when there's nothing found. */ }
+
+@media screen and (max-width: 1170px) {
+  .c-wrapp {
+    width: 98%; } }
 
 html {
   font-family: "Raleway", sans-serif; }
@@ -224,6 +229,7 @@ html {
       .slide__domain-name input[type="text"]:focus {
         outline: 2px solid rgba(32, 34, 66, 0.5); }
   .slide__inline {
+    vertical-align: top;
     display: inline-block;
     text-align: left; }
   .slide__btn {

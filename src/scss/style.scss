@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'base';
 @import 'ikselect';
+@import 'media-queries';
 
 
 
@@ -166,6 +167,7 @@ header.m-item {
   }
 
   &__inline {
+    vertical-align: top;
     display: inline-block;
     text-align: left;
   }
