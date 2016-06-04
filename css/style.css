@@ -127,7 +127,9 @@
 
 @media screen and (max-width: 1170px) {
   .c-wrapp {
-    width: 98%; } }
+    width: 98%; }
+  .clients__about {
+    width: 100%; } }
 
 html {
   font-family: "Raleway", sans-serif; }
