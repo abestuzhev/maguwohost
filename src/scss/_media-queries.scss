@@ -190,14 +190,17 @@
   .slide__btn {
     width: 100%;
   }
+  .header__item a {
+    padding: 10px;
+  }
   /* #menu is the original menu */
-  // .js #menu {
-  //   display:none;
-  // }
-  //
-  // .js .slicknav_menu {
-  //   display:block;
-  // }
+  .js #menu {
+    display:none;
+  }
+
+  .js .slicknav_menu {
+    display:block;
+  }
 }//end max-width: 470px
 
 @media screen and (max-width: 380px) {

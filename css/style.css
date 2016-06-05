@@ -488,6 +488,9 @@ footer.m-item {
     float: left;
     margin-bottom: 70px; }
 
+.slicknav_menu {
+  display: none; }
+
 @media screen and (max-width: 1170px) {
   .c-wrapp {
     width: 94%; }
@@ -602,7 +605,13 @@ footer.m-item {
     margin-top: 10px; }
   .slide__btn {
     width: 100%; }
-  /* #menu is the original menu */ }
+  .header__item a {
+    padding: 10px; }
+  /* #menu is the original menu */
+  .js #menu {
+    display: none; }
+  .js .slicknav_menu {
+    display: block; } }
 
 @media screen and (max-width: 380px) {
   .action_block .action-text {
