@@ -2,6 +2,7 @@ $(function () {
 	$('.slide__intro').ikSelect();
 });
 
-$('#menu').slicknav({
-		prependTo:'#demo1'
+$(document).ready(function(){
+	$('#menu').slicknav();
+	// $("#my-menu").mmenu();
 });

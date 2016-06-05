@@ -20,6 +20,7 @@
     "jquery-form-styler": "jquery.form-styler#^1.7.5",
     "jquery": "^2.2.4",
     "ikselect": "^1.1.0",
-    "slicknav": "^1.0.7"
+    "slicknav": "^1.0.7",
+    "jQuery.mmenu": "mmenu#^5.6.4"
   }
 }

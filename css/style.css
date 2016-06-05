@@ -601,7 +601,8 @@ footer.m-item {
     margin: 0 auto;
     margin-top: 10px; }
   .slide__btn {
-    width: 100%; } }
+    width: 100%; }
+  /* #menu is the original menu */ }
 
 @media screen and (max-width: 380px) {
   .action_block .action-text {
@@ -611,13 +612,3 @@ footer.m-item {
     line-height: 40px; }
   .clients__list .clients-item {
     width: 100%; } }
-
-.slicknav_menu {
-  display: none; }
-
-@media screen and (max-width: 40em) {
-  /* #menu is the original menu */
-  .js #menu {
-    display: none; }
-  .js .slicknav_menu {
-    display: block; } }
