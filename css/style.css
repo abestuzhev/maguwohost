@@ -3,7 +3,7 @@
   font-family: Rockwell;
   src: url("../../fonts/rockwell.ttf"); }
 
-.m-item--left__serv, .m-item--right__serv, .m-item, .m-item--left, .m-item--right, .c-wrapp, .features-item, .clients__about, .clients__list {
+.m-item--left__serv, .m-item--right__serv, .m-item, .m-item--left, .m-item--right, .c-wrapp, .features-item, .clients__about, .clients__list, .clients .reviews-item {
   outline: 1px solid #777; }
 
 .clients-wrap::after, .clients-reviews::after, .clients__list::after {
@@ -124,12 +124,6 @@
 
 .ik_nothing_found {
   /* Block that's shown when there's nothing found. */ }
-
-@media screen and (max-width: 1170px) {
-  .c-wrapp {
-    width: 98%; }
-  .clients__about {
-    width: 100%; } }
 
 html {
   font-family: "Raleway", sans-serif; }
@@ -493,3 +487,40 @@ footer.m-item {
     width: 100%;
     float: left;
     margin-bottom: 70px; }
+
+@media screen and (max-width: 1170px) {
+  .c-wrapp {
+    width: 94%; }
+  .clients__about {
+    text-align: center;
+    width: 80%;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 20px; }
+  .clients-wrap {
+    margin-bottom: 64px; }
+  .clients__list {
+    width: 80%;
+    float: none;
+    margin: 0 auto; }
+  .clients-reviews {
+    margin-bottom: 55px; }
+  .clients .reviews-item {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 60px; }
+  .features {
+    padding: 50px 0 60px; }
+    .features-item {
+      box-sizing: border-box;
+      width: 49%;
+      margin-bottom: 2%; }
+    .features__subtitle {
+      margin-bottom: 40px; }
+  .plans__question, .plans__btn {
+    text-align: center;
+    float: none; }
+  .plans__btn {
+    width: 50%;
+    margin: auto; } }

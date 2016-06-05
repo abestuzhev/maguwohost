@@ -1,8 +1,61 @@
 @media screen and (max-width: 1170px) {
   .c-wrapp {
-    width:98%;
+    width:94%;
   }
   .clients__about {
-    width:100%;
+    text-align: center;
+    width:80%;
+    float: none;
+    margin: 0 auto;
+    margin-bottom:20px;
   }
+
+  .clients-wrap {
+    margin-bottom: 64px;
+  }
+
+  .clients__list {
+    width:80%;
+    float:none;
+    margin: 0 auto;
+  }
+
+  .clients-reviews {
+    margin-bottom: 55px;
+  }
+
+  .clients .reviews-item {
+    display: block;
+    width:80%;
+    margin:0 auto;
+    margin-bottom:60px;
+  }
+
+  .features {
+    padding: 50px 0 60px;
+
+    &-item {
+      box-sizing: border-box;
+      width: 49%;
+      margin-bottom:2%;
+    }
+
+    &__subtitle {
+      margin-bottom: 40px;
+    }
+  }
+
+  .plans {
+
+    &__question, &__btn {
+      text-align: center;
+      float: none;
+    }
+
+    &__btn {
+      width: 50%;
+      margin: auto;
+    }
+  }
+
 }

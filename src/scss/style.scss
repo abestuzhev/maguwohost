@@ -2,7 +2,6 @@
 @import 'fonts';
 @import 'base';
 @import 'ikselect';
-@import 'media-queries';
 
 
 
@@ -446,6 +445,7 @@ header.m-item {
   // }
 
   .reviews-item {
+    @extend %outline;
     position: relative;
     box-sizing: border-box;
     display: inline-block;
@@ -639,3 +639,6 @@ footer.m-item {
     }
   }
 }
+
+
+@import 'media-queries';
