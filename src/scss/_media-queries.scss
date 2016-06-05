@@ -2,6 +2,30 @@
   .c-wrapp {
     width:94%;
   }
+
+  .header {
+
+    &__logo {
+      text-align: center;
+      margin: 0 auto;
+      float: none;
+    }
+
+    &__menu {
+      width: 50%;
+      float: none;
+      margin: 35px auto 0;
+      text-align: justify;
+
+      &::after {
+        // @extend %inline-justufy;
+        content: '';
+        width: 100%;
+        display: inline-block;
+    }
+  }
+}
+
   .clients__about {
     text-align: center;
     width:80%;

@@ -491,6 +491,19 @@ footer.m-item {
 @media screen and (max-width: 1170px) {
   .c-wrapp {
     width: 94%; }
+  .header__logo {
+    text-align: center;
+    margin: 0 auto;
+    float: none; }
+  .header__menu {
+    width: 50%;
+    float: none;
+    margin: 35px auto 0;
+    text-align: justify; }
+    .header__menu::after {
+      content: '';
+      width: 100%;
+      display: inline-block; }
   .clients__about {
     text-align: center;
     width: 80%;
