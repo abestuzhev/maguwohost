@@ -19,6 +19,7 @@
     "font-awesome": "fontawesome#^4.6.3",
     "jquery-form-styler": "jquery.form-styler#^1.7.5",
     "jquery": "^2.2.4",
-    "ikselect": "^1.1.0"
+    "ikselect": "^1.1.0",
+    "slicknav": "^1.0.7"
   }
 }

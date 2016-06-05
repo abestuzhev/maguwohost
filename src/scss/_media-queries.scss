@@ -22,9 +22,29 @@
         content: '';
         width: 100%;
         display: inline-block;
+      }
+    }
+
+    &__contact {
+      display: none;
     }
   }
-}
+
+  .m-item--left, .m-item--right {
+    width: auto;
+    float: none;
+
+    &__serv {
+      float: none;
+      width: auto;
+
+      padding: 55px 0 50px;
+    }
+  }
+
+  .clients {
+    padding: 40px 0;
+  }
 
   .clients__about {
     text-align: center;
@@ -56,7 +76,7 @@
   }
 
   .features {
-    padding: 50px 0 60px;
+    padding: 50px 0 40px;
 
     &-item {
       box-sizing: border-box;
@@ -81,5 +101,112 @@
       margin: auto;
     }
   }
-
 }
+
+@media screen and (max-width: 930px) {
+  .header__menu {
+    width: 70%;
+  }
+
+  .clients__about,
+  .clients__list,
+  .clients .reviews-item {
+    width: 100%;
+  }
+
+  footer.m-item .footer__map {
+    background-size: cover;
+    background-position: 70% 50%;
+  }
+
+  .plans {
+    padding: 90px 15%;
+  }
+
+  .plans__btn {
+    width: 100%;
+  }
+
+  .plans__question .question__title {
+    line-height: 40px;
+  }
+}//end max-width: 930px
+
+@media screen and (max-width: 740px) {
+  .header__menu {
+    width: 90%;
+  }
+
+  .clients__list .clients-item {
+    width: 49%;
+    background-color: #F5F5F5;
+    text-align: center;
+    margin-bottom:2%;
+  }
+
+}//end max-width: 740px
+
+@media screen and (max-width: 640px) {
+  .features-item {
+    display: block;
+    width: 100%;
+  }
+
+  .slide__domain-name input[type="text"],
+  .ik_select_link {
+    font-size: 14px;
+  }
+
+  .slide__domain-name {
+    width: 100%;
+    text-align: center;
+  }
+
+  .slide__btn {
+    font-size: 12px;
+  }
+
+}//end max-width: 640px
+
+@media screen and (max-width: 515px) {
+  .header__menu {
+    width: 100%;
+  }
+
+  .slide__domain-name {
+    padding: 18px 0;
+  }
+
+}//end max-width: 515px
+
+@media screen and (max-width: 470px) {
+  .slide__inline:last-child {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .slide__btn {
+    width: 100%;
+  }
+  
+}//end max-width: 470px
+
+@media screen and (max-width: 380px) {
+  .action_block .action-text {
+    margin: 0 25px;
+    margin-bottom: 30px;
+  }
+
+  .action_block .action-title {
+    line-height: 40px;
+  }
+
+  .clients__list .clients-item {
+    width: 100%;
+  }
+
+
+
+}//end max-width: 380px
