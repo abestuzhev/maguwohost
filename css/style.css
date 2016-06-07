@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
 @font-face {
   font-family: Rockwell;
-  src: url("../../fonts/rockwell.ttf"); }
+  src: url("../fonts/rockwell.ttf"); }
 
 .m-item--left__serv, .m-item--right__serv, .m-item, .m-item--left, .m-item--right, .c-wrapp, .features-item, .clients__about, .clients__list, .clients .reviews-item {
   outline: 0px solid #777; }
@@ -313,7 +313,7 @@ html {
 
 .features {
   width: 100%;
-  background: #fbf8f1 url("../../img/bg-features.png") no-repeat 50% 100%;
+  background: #fbf8f1 url("../img/bg-features.png") no-repeat 50% 100%;
   padding: 100px 0 120px; }
   .features-bgc {
     background-color: #fbf8f1; }
