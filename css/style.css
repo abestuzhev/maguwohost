@@ -4,17 +4,17 @@
   src: url("../../fonts/rockwell.ttf"); }
 
 .m-item--left__serv, .m-item--right__serv, .m-item, .m-item--left, .m-item--right, .c-wrapp, .features-item, .clients__about, .clients__list, .clients .reviews-item {
-  outline: 1px solid #777; }
+  outline: 0px solid #777; }
 
 .clients-wrap::after, .clients-reviews::after, .clients__list::after {
   content: '';
   display: inline-block;
   width: 100%; }
 
-.ik_select_list li:hover, .header__contact__btn a:hover, .slide__btn:hover, .action_block .action-btn:hover, .plans__btn a:hover, .header__contact__btn a, .action_block .action-btn, .plans__btn a, footer.m-item .footer__nav-item a, footer.m-item .footer__nav-item a:hover, footer.m-item .footer__nav-back, footer.m-item .footer__nav-back:hover, footer.m-item .footer__social-item a, footer.m-item .footer__social-item a:hover {
+.ik_select_list li:hover, .header__contact__btn a:hover, .slide__btn:hover, .action_block .action-btn:hover, .plans__btn a:hover, .slicknav_nav a:hover, .header__contact__btn a, .action_block .action-btn, .plans__btn a, footer.m-item .footer__nav-item a, footer.m-item .footer__nav-item a:hover, footer.m-item .footer__nav-back, footer.m-item .footer__nav-back:hover, footer.m-item .footer__social-item a, footer.m-item .footer__social-item a:hover, .slicknav_nav a {
   transition: all .2s ease-out; }
 
-.ik_select_list li:hover, .header__contact__btn a:hover, .slide__btn:hover, .action_block .action-btn:hover, .plans__btn a:hover {
+.ik_select_list li:hover, .header__contact__btn a:hover, .slide__btn:hover, .action_block .action-btn:hover, .plans__btn a:hover, .slicknav_nav a:hover {
   opacity: .8; }
 
 .header::after, .c-wrapp::after, .m-item--left::after,
@@ -231,7 +231,7 @@ html {
   .slide__btn {
     background-color: #ffe13e;
     border: none;
-    color: white;
+    color: #000;
     padding: 20px 22px 18px 22px;
     text-align: center;
     text-decoration: none;
@@ -267,6 +267,8 @@ html {
 
 .action_block {
   color: #fff; }
+  .action_block--dark-text {
+    color: #000; }
   .action_block .action-img {
     position: relative;
     width: 170px;
@@ -285,7 +287,7 @@ html {
   .action_block .action-title {
     font-size: 36px;
     font-weight: bold;
-    line-height: 24px;
+    line-height: 40px;
     text-align: center;
     margin-bottom: 20px; }
   .action_block .action-text {
@@ -305,6 +307,9 @@ html {
     border: 3px solid #fff;
     color: #fff;
     text-decoration: none; }
+    .action_block .action-btn--dark-text {
+      color: #000;
+      border-color: #000; }
 
 .features {
   width: 100%;
@@ -314,7 +319,7 @@ html {
     background-color: #fbf8f1; }
   .features__title {
     font-size: 48px;
-    line-height: 24px;
+    line-height: 40px;
     font-weight: 700;
     text-align: center; }
   .features__subtitle {
@@ -488,9 +493,6 @@ footer.m-item {
     float: left;
     margin-bottom: 70px; }
 
-.slicknav_menu {
-  display: none; }
-
 @media screen and (max-width: 1170px) {
   .c-wrapp {
     width: 94%; }
@@ -505,8 +507,8 @@ footer.m-item {
     text-align: justify; }
     .header__menu::after {
       content: '';
-      width: 100%;
-      display: inline-block; }
+      display: inline-block;
+      width: 100%; }
   .header__contact {
     display: none; }
   .m-item--left, .m-item--right {
@@ -541,8 +543,8 @@ footer.m-item {
     padding: 50px 0 40px; }
     .features-item {
       box-sizing: border-box;
-      width: 49%;
-      margin-bottom: 2%; }
+      width: 48.5%;
+      margin-bottom: 3%; }
     .features__subtitle {
       margin-bottom: 40px; }
   .plans__question, .plans__btn {
@@ -614,10 +616,29 @@ footer.m-item {
     display: block; } }
 
 @media screen and (max-width: 380px) {
+  .slide {
+    padding: 50px 0 70px 0; }
   .action_block .action-text {
     margin: 0 25px;
     margin-bottom: 30px; }
-  .action_block .action-title {
-    line-height: 40px; }
   .clients__list .clients-item {
     width: 100%; } }
+
+.slicknav_menu {
+  display: none;
+  padding: 0; }
+  .slicknav_menu .slicknav_menutxt {
+    text-shadow: none;
+    color: #000; }
+  .slicknav_menu .slicknav_icon-bar {
+    background-color: #000; }
+
+.slicknav_nav {
+  background-color: #ffe13e;
+  box-shadow: inset 0px 9px 32px -8px rgba(0, 0, 0, 0.15); }
+  .slicknav_nav a:hover {
+    border-radius: 0px;
+    background: #faf9f9; }
+
+.slicknav_btn {
+  background: transparent; }

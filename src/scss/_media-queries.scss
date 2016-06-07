@@ -4,7 +4,6 @@
   }
 
   .header {
-
     &__logo {
       text-align: center;
       margin: 0 auto;
@@ -18,10 +17,9 @@
       text-align: justify;
 
       &::after {
-        // @extend %inline-justufy;
-        content: '';
-        width: 100%;
+        content:'';
         display: inline-block;
+        width: 100%;
       }
     }
 
@@ -37,7 +35,6 @@
     &__serv {
       float: none;
       width: auto;
-
       padding: 55px 0 50px;
     }
   }
@@ -80,8 +77,8 @@
 
     &-item {
       box-sizing: border-box;
-      width: 49%;
-      margin-bottom:2%;
+      width: 48.5%;
+      margin-bottom: 3%;
     }
 
     &__subtitle {
@@ -90,7 +87,6 @@
   }
 
   .plans {
-
     &__question, &__btn {
       text-align: center;
       float: none;
@@ -101,7 +97,7 @@
       margin: auto;
     }
   }
-}
+}//end max-width: 117 0px
 
 @media screen and (max-width: 930px) {
   .header__menu {
@@ -143,7 +139,6 @@
     text-align: center;
     margin-bottom:2%;
   }
-
 }//end max-width: 740px
 
 @media screen and (max-width: 640px) {
@@ -165,7 +160,6 @@
   .slide__btn {
     font-size: 12px;
   }
-
 }//end max-width: 640px
 
 @media screen and (max-width: 515px) {
@@ -176,7 +170,6 @@
   .slide__domain-name {
     padding: 18px 0;
   }
-
 }//end max-width: 515px
 
 @media screen and (max-width: 470px) {
@@ -190,9 +183,11 @@
   .slide__btn {
     width: 100%;
   }
+
   .header__item a {
     padding: 10px;
   }
+
   /* #menu is the original menu */
   .js #menu {
     display:none;
@@ -204,19 +199,16 @@
 }//end max-width: 470px
 
 @media screen and (max-width: 380px) {
+  .slide {
+    padding: 50px 0 70px 0;
+  }
+
   .action_block .action-text {
     margin: 0 25px;
     margin-bottom: 30px;
   }
 
-  .action_block .action-title {
-    line-height: 40px;
-  }
-
   .clients__list .clients-item {
     width: 100%;
   }
-
-
-
 }//end max-width: 380px

@@ -1,0 +1,31 @@
+%outline {
+  outline:0px solid #777;
+}
+
+%inline-justufy {
+  content:'';
+  display: inline-block;
+  width: 100%;
+}
+
+%transition {
+  transition: all .2s ease-out;
+}
+
+%hover-btn {
+  opacity: .8;
+  @extend %transition;
+}
+
+%clear {
+  content:'';
+  display: table;
+  clear: both;
+}
+
+%services {
+  @extend %outline;
+  width: 585px;
+  padding-top: 115px;
+  padding-bottom: 105px;
+}

@@ -1,8 +1,6 @@
 
-@import 'fonts';
 @import 'base';
 @import 'ikselect';
-
 
 
 
@@ -11,9 +9,6 @@ html {
 }
 
 //header
-header.m-item {
-  // height:147px;
-}
 
 .header {
   padding: 35px 0 30px 0;
@@ -112,6 +107,7 @@ header.m-item {
   }
 }
 
+//slide
 
 .slide {
   color: $light-text;
@@ -157,7 +153,6 @@ header.m-item {
       font-size: 18px;
       outline: 0;
       border-width: 0;
-      // line-height: 24px;
       padding: 18px 22px;
 
       &:focus {
@@ -175,7 +170,7 @@ header.m-item {
   &__btn {
     background-color: $accent-bgc;
     border: none;
-    color: white;
+    color: $dark-text;
     padding: 20px 22px 18px 22px;
     text-align: center;
     text-decoration: none;
@@ -222,34 +217,34 @@ header.m-item {
     }
   }
 }
-// .action-block {
-//   height:100%;
-//   width:100%;
-//   background-color: #ffe13e;
-// }
 
 //main
+
 .c-wrapp {
   @extend %outline;
   position: relative;
   max-width: 1170px;
   height: 100%;
-  // background-color: $bgc;
   margin: 0 auto;
 
   &::after {
     @extend %clear;
   }
 }
+
 .m-item--left::after,
 .m-item--right::after {
   @extend %clear;
 }
 
-
 //services
+
 .action_block {
   color: $light-text;
+
+  &--dark-text {
+    color: $dark-text;
+  }
 
   .action-img {
     position: relative;
@@ -274,7 +269,7 @@ header.m-item {
   .action-title {
     font-size: 36px;
     font-weight: bold;
-    line-height: 24px;
+    line-height: 40px;
     text-align: center;
     margin-bottom: 20px;
   }
@@ -300,6 +295,11 @@ header.m-item {
     text-decoration: none;
     @extend %transition;
 
+    &--dark-text {
+      color: $dark-text;
+      border-color: $dark-text;
+    }
+
     &:hover {
       @extend %hover-btn;
     }
@@ -307,6 +307,7 @@ header.m-item {
 }
 
 //features
+
 .features {
   width:100%;
   background: #fbf8f1 url('../../img/bg-features.png') no-repeat 50% 100%;
@@ -318,7 +319,7 @@ header.m-item {
 
   &__title {
     font-size: 48px;
-    line-height: 24px;
+    line-height: 40px;
     font-weight: 700;
     text-align: center;
   }
@@ -333,6 +334,7 @@ header.m-item {
   &__list {
     width:100%;
     text-align: justify;
+
     &::after {
       content: '';
       width:100%;
@@ -365,8 +367,6 @@ header.m-item {
     }
 
     &__title {
-      // font-size: 30px;
-      // line-height: 24px;
       margin-bottom: 20px;
       color: $accent-text;
       font: 30px/24px $accent-font;
@@ -379,7 +379,9 @@ header.m-item {
     }
   }
 }
+
 //clients
+
 .clients {
   width:100%;
   padding-top: 80px;
@@ -434,16 +436,6 @@ header.m-item {
       display: inline-block;
     }
   }
-  // &-reviews__list {
-  //   @extend %outline;
-  //   margin-top: 88px;
-  //   text-align: justify;
-  //   font-size: 0;
-  //
-  //   &::after {
-  //     @extend %inline-justufy;
-  //   }
-  // }
 
   .reviews-item {
     @extend %outline;
@@ -481,6 +473,7 @@ header.m-item {
 }
 
 //Plans
+
 .plans {
   padding: 90px 120px;
   background-color: $default-text;
@@ -540,6 +533,7 @@ header.m-item {
 }
 
 //footer
+
 footer.m-item {
   width: 100%;
   background-color: #363855;
@@ -601,23 +595,23 @@ footer.m-item {
     }
   }
   .footer__social {
-      list-style: none;
-      margin-bottom: 60px;;
+    list-style: none;
+    margin-bottom: 60px;;
 
-      &-item {
-        display: inline-block;
-        margin-left: 20px;
+    &-item {
+      display: inline-block;
+      margin-left: 20px;
 
-        a {
-          color:$accent-bgc;
+      a {
+        color:$accent-bgc;
+        @extend %transition;
+
+        &:hover {
+          color: $light-text;
           @extend %transition;
-
-          &:hover {
-            color: $light-text;
-            @extend %transition;
-          }
         }
       }
+    }
   }
 
 
@@ -630,20 +624,43 @@ footer.m-item {
     &::after {
       @extend %clear;
     }
-    // position: absolute;
-    // bottom: 70px;
-    // left:50%;
-    // margin-left:120px;
-
-    &-text {
-      // color: $light-text;
-    }
   }
-}
-
-.slicknav_menu {
-	display:none;
 }
 
 
 @import 'media-queries';
+
+// mobile menu
+
+.slicknav_menu {
+  display:none;
+  padding: 0;
+
+  .slicknav_menutxt {
+    text-shadow: none;
+    color: $dark-text;
+  }
+
+  .slicknav_icon-bar {
+    background-color: $dark-text;
+  }
+}
+
+.slicknav_nav {
+  background-color: $accent-bgc;
+  box-shadow: inset 0px 9px 32px -8px rgba(0, 0, 0, 0.15);
+
+  a {
+    @extend %transition;
+
+    &:hover {
+      @extend %hover-btn;
+      border-radius: 0px;
+      background: #faf9f9;
+    }
+  }
+}
+
+.slicknav_btn {
+  background: transparent;
+}
